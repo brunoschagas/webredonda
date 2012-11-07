@@ -1,7 +1,11 @@
 Webredonda::Application.routes.draw do
-  get 'frontend/:template' => 'frontend#show'
+  resources :posts
 
-  get 'frontend(/index)' => 'frontend#index'
+  get "pagina_inicial/index"
+
+  get"inicial" => 'pagina_inicial#index'
+  
+  get"sobre" => 'pagina_inicial#sobre' 
 
   get "frontend/index"
 
